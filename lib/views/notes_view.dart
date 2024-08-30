@@ -11,13 +11,22 @@ class HomeView extends StatelessWidget {
       floatingActionButton: Padding(
         padding: const EdgeInsets.only(right: 12, bottom: 12),
         child: FloatingActionButton(
+          backgroundColor: Colors.orange,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(32),
+          ),
           onPressed: () {
-            showModalBottomSheet(context: context, builder: (context){
-              return const AddNoteBottomSheet();
-            },);
+            showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return const AddNoteBottomSheet(
+                );
+              },
+            );
           },
           child: const Icon(
             Icons.add,
+            color: Colors.black,
           ),
         ),
       ),
@@ -25,4 +34,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-
